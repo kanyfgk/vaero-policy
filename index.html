@@ -18,6 +18,10 @@ body{
   background:#f3efe7;
   color:#222;
   font-family:Arial,sans-serif;
+
+  opacity:0;
+  filter:blur(6px);
+  transition:all .6s ease;
 }
 
 .hero{
@@ -185,6 +189,11 @@ body{
     padding:80px 6%;
   }
 }
+ 
+body.loaded{
+  opacity:1;
+  filter:blur(0);
+}
 </style>
 </head>
 
@@ -282,6 +291,10 @@ body{
 <div class="footer">
   VAERO — Policies & Support
 </div>
-
+<script>
+window.addEventListener("load", function(){
+  document.body.classList.add("loaded");
+});
+</script>
 </body>
 </html> 
