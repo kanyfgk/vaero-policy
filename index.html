@@ -330,7 +330,13 @@ document.querySelector(".sub").innerText = t.sub;
 document.querySelector(".hero h1").innerText = t.title;
 document.querySelector(".hero p").innerText = t.desc;
 
-document.querySelectorAll(".nav a").forEach((a,i)=>{ if(t.nav[i]) a.innerText = t.nav[i]; });
+const navLinks = document.querySelectorAll("nav a");
+
+if(navLinks.length){
+  navLinks.forEach((a,i)=>{
+    if(t.nav[i]) a.innerText = t.nav[i];
+  });
+}
 document.querySelectorAll(".block h2").forEach((h,i)=>{ if(t.heads[i]) h.innerText = t.heads[i]; });
 
 document.querySelector(".support h2").innerText = t.supportTitle;
