@@ -296,57 +296,6 @@ window.addEventListener("load", function(){
   document.body.classList.add("loaded");
 });
 </script>
-  <script>
-const lang = "tr";
-
-const texts = {
-  tr: {
-    sub:"Politikalar & Destek",
-    title:"Daha temiz bir deneyim için net şartlar.",
-    desc:"VAERO politikalarını sade, anlaşılır ve doğrudan tutar. Bu şartlar deneyimi, sipariş sürecini ve destek akışını korumak için hazırlanmıştır.",
-    nav:["Gizlilik","Kullanım","Gönderim","İade","Destek"],
-    heads:["Gizlilik Politikası","Kullanım Şartları","Gönderim & Takip","İade & Geri Ödeme"],
-    supportTitle:"Desteğe mi ihtiyacın var?",
-    supportText:"Sipariş, teslimat, ürün desteği veya stok durumu için VAERO ile doğrudan iletişime geçebilirsin.",
-    supportBtn:"Destek al",
-    footer:"VAERO — Politikalar & Destek"
-  },
-  en: {
-    sub:"Policies & Support",
-    title:"Clear terms for a cleaner experience.",
-    desc:"VAERO keeps its policies simple, direct and easy to understand. These terms are designed to protect the experience, the order process and the support flow.",
-    nav:["Privacy","Terms","Shipping","Returns","Support"],
-    heads:["Privacy Policy","Terms of Use","Shipping & Tracking","Returns & Refunds"],
-    supportTitle:"Need support?",
-    supportText:"For order questions, delivery details, product support or batch availability, you can contact VAERO directly.",
-    supportBtn:"Support",
-    footer:"VAERO — Policies & Support"
-  }
-};
-
-const t = texts[lang] || texts.en;
-
-document.querySelector(".sub").innerText = t.sub;
-document.querySelector(".hero h1").innerText = t.title;
-document.querySelector(".hero p").innerText = t.desc;
-
-const navLinks = document.querySelectorAll("nav a");
-
-if(navLinks.length){
-  navLinks.forEach((a,i)=>{
-    if(t.nav[i]) a.innerText = t.nav[i];
-  });
-}
-document.querySelectorAll(".block h2").forEach((h,i)=>{ if(t.heads[i]) h.innerText = t.heads[i]; });
-
-document.querySelector(".support h2").innerText = t.supportTitle;
-document.querySelector(".support p").innerText = t.supportText;
-document.querySelector(".support .btn").innerText = t.supportBtn;
-document.querySelector(".footer").innerText = t.footer;
-
-if(lang === "fa"){
-  document.body.dir = "rtl";
-}
-</script>
+  
 </body>
 </html> 
